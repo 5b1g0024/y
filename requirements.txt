@@ -1,0 +1,5 @@
+Flask
+flask_sqlalchemy
+flask_wtf
+flask_bcrypt
+flask_login
