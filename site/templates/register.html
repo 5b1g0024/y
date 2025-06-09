@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}註冊 - 我的Blog{% endblock %}
+
+{% block content %}
+<h2>註冊帳號</h2>
+<form method="POST">
+    <label>帳號：</label><br>
+    <input type="text" name="username" required /><br>
+    <label>密碼：</label><br>
+    <input type="password" name="password" required /><br>
+    <label>確認密碼：</label><br>
+    <input type="password" name="confirm_password" required /><br><br>
+    <input type="submit" value="註冊" />
+</form>
+{% endblock %}

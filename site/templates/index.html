@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}首頁 - 我的Blog{% endblock %}
+
+{% block content %}
+<h1>最新貼文</h1>
+{% for post in posts %}
+    <div class="post">
+        <h2>{{ post.title }}</h2>
+        <p>作者：{{ post.author.username }} | 發布時間：{{ post.date_posted.strftime('%Y-%m-%d %H:%M') }}</p>
+        {% if post.image_file %}
+            <img src="{{ url_for('static', filename='uploads/' + post.image_file) }}" alt="貼文圖片" />
+        {% endif %}
+        <p>{{ post.content }}</p>
+    </div>
+{% else %}
+    <p>目前沒有貼文</p>
+{% endfor %}
+{% endblock %}
